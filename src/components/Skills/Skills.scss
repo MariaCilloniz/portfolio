@@ -1,0 +1,76 @@
+.skills {
+    padding: 4rem 1rem;
+    color: #333;
+    width: 74vw;
+
+    .section-header {
+        text-align: left;
+        margin-bottom: 2rem;
+
+        &__meta {
+            font-size: 12px;
+            color: #999;
+            text-transform: uppercase;
+        }
+
+        &__title {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-top: 0.5rem;
+        }
+    }
+
+    .skills__description {
+        text-align: center;
+        font-size: 1rem;
+        color: #666;
+        margin-bottom: 2rem;
+    }
+
+    .skills__grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        justify-content: space-between;
+
+        .skill {
+            flex: 1 1 45%; // Adjust as needed for responsiveness
+            display: flex;
+            flex-direction: column;
+            color: white;
+
+            &__name {
+                font-size: 1rem;
+                font-weight: bold;
+            }
+            &__percentage {
+                display: flex;
+                justify-content: flex-end;
+            }
+
+            &__progress {
+                width: 100%;
+                height: 8px;
+                background: #f1f1f1;
+                border-radius: 4px;
+                overflow: hidden;
+                position: relative;
+            }
+
+            &__fill {
+                height: 100%;
+                border-radius: 4px;
+                transition: width 1s ease-in-out;
+                position: relative;
+
+                // Custom colors for each skill
+                &--react { background: #e683ff; }
+                &--js { background: #96ffff; }
+                &--html { background: #75ff0d; }
+                &--node { background: #ffec01; }
+                &--css { background: #8081ff; }
+                &--mysql { background: #ff59ab; }
+            }
+        }
+    }
+}
