@@ -1,42 +1,34 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Pencil } from 'lucide-react';
+import { Briefcase } from 'lucide-react';;
 import './Experience.scss';
 
 function Experience() {
     const experiences = [
         {
-            title: "Full Stack Developer",
-            company: "Company Name",
-            period: "2017-2018",
-            description: "Tolerably earnestly middleton extremely distrusts she boy now not. Add and offered prepare how cordial two promise. Greatly who affixed suppose but enquire compact prepare all put. Added forth chief trees but rooms think may.",
+            title: "Team Trainer - Customer Service",
+            company: "Whole Foods Market",
+            period: "JUL 2019 - OCT 2024",
+            description: "Lead the design and implementation of training programs using internal LMS, to ensure the integration of new team members, enhancing onboarding workflows, and improving operational efficiency. Manage and maintain a database of training records, utilizing Cornerstone to automate tracking and reporting. Provide both technical and soft skills coaching to team members.",
             color: "color-1",
             animateFrom: "left"
         },
         {
-            title: "Front End Developer at Google",
-            company: "Google",
-            period: "2017-2018",
-            description: "Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.",
+            title: "Administrative Assistant",
+            company: "La Burreria",
+            period: "JAN 2018 - JUNE 2019",
+            description: "Incorporate the use of Zenda HR software to streamline employee scheduling, resulting in improved team productivity. Optimize inventory control and supplier orders by developing an automated stock monitoring system in Excel. Manage financial operations and boost customer engagement through social media strategies.",
             color: "color-2",
             animateFrom: "right"
         },
         {
-            title: "System Analyst",
-            company: "Company Name",
-            period: "2017-2018",
-            description: "Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.",
+            title: "Sales Assistant",
+            company: "Gina y Michell Alimentos",
+            period: "JAN 2017 - JAN 2018",
+            description: "Optimized customer experience by promptly responding to inquiries, efficiently handling transactions, restocking and organizing product displays, and ensuring smooth store operations.",
             color: "color-3",
             animateFrom: "left"
         },
-        {
-            title: "Creative Designer",
-            company: "Company Name",
-            period: "2017-2018",
-            description: "Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.",
-            color: "color-4",
-            animateFrom: "right"
-        }
     ];
 
     const TimelineEntry = ({ experience, index }) => {
@@ -52,7 +44,7 @@ function Experience() {
             >
                 <div className="timeline__entry-inner">
                     <div className={`timeline__icon ${color}`}>
-                        <Pencil size={20} />
+                        <Briefcase size={20} />
                     </div>
 
                     <div className="timeline__label">

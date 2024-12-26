@@ -10,28 +10,26 @@ function Education() {
     const educationItems = [
         {
             id: 'panel1',
-            title: 'Master Degree Graphic Design',
+            title: 'Diploma in Software Engineering',
             content: {
-                col1: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.',
-                col2: 'Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.'
+                col1: 'BrainStation, Sep 2024 - Dec 2024',
+                col2: 'Software Engineering Foundations, Javascript, React JS, Back-End Development, DevOps.'
             }
         },
         {
             id: 'panel2',
-            title: 'Bachelor Degree of Computer Science',
+            title: 'Bachelor Degree of Arts, Major in Philsophy',
             content: {
-                text: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.',
-                list: [
-                    'Separated they live in Bookmarksgrove right',
-                    'Separated they live in Bookmarksgrove right'
-                ]
+                col1: 'University of British Columbia, Sep 2021 - May 2024',
+                col2: 'Logic, Analytical Philosphy, Ethics, Continental Philosophy, Philosphy of Science, Mind and Language.'
             }
         },
         {
             id: 'panel3',
-            title: 'Diploma in Information Technology',
+            title: 'Associate of Arts Degree',
             content: {
-                text: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.'
+                col1: 'Corpus Christi College, Sep 2019 - May 2021',
+                col2: 'Liberal Arts and Sciences, General Studies and Humanities'
             }
         }
     ];
