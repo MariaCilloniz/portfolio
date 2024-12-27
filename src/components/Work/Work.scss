@@ -1,12 +1,8 @@
 .work {
-    padding: 7em 0;
     font-family: 'Poppins';
+    padding: 3rem 7rem;
+    width: 78vw;
 
-    &__content {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 1rem;
-    }
 
     &__filters {
         display: flex;

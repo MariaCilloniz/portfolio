@@ -9,6 +9,7 @@
     transition: transform 0.3s ease;
     z-index: 1000;
     background: #222222;
+    height: 100%;
 
     @media (min-width: 768px) {
         transform: none;

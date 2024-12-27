@@ -14,8 +14,8 @@ body {
 
 // Main app structure
 .app {
-  min-height: 100vh;
-  position: relative;
+  // min-height: 100vh;
+  // position: relative;
   overflow-x: hidden; // Prevent horizontal scroll
   background: linear-gradient(45deg, #111, #1a1a1a);
 }
@@ -26,18 +26,18 @@ body {
   min-height: 100vh;
   transition: margin-left 0.3s ease;
   margin-left: 350px; // Match sidebar width
-  width: calc(100% - 300px); // Ensure content width is correct
+  // width: calc(100% - 300px); // Ensure content width is correct
   }
 
-  section {
-    padding: 4rem 2rem;
+  // section {
+  //   padding: 4rem 2rem;
     
-    // Content container for sections
-    &__content {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-  }
+  //   // Content container for sections
+  //   &__content {
+  //     max-width: 1200px;
+  //     margin: 0 auto;
+  //   }
+  // }
 
 
 // Mobile navigation toggle button
