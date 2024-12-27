@@ -40,9 +40,9 @@ function App() {
         <About id="about" />
         <Services id="services" />
         <Skills id="skills" />
+        <Work id="work" />
         <Education id="education" />
         <Experience id="experience" />
-        <Work id="work" />
         <Contact id="contact" />
       </main>
     </div>

@@ -1,5 +1,6 @@
 .work {
     padding: 7em 0;
+    font-family: 'Poppins';
 
     &__content {
         max-width: 1200px;
@@ -24,6 +25,7 @@
         font-size: 1rem;
         transition: all 0.3s ease;
         position: relative;
+        font-family: 'Poppins', sans-serif;
 
         &:after {
             content: '';
@@ -65,11 +67,14 @@
 
         &-image {
             position: relative;
-            height: 300px;
+            height: 200px;
             background-size: cover;
             background-position: center;
             transition: all 0.3s ease;
+            transition: all 0.3s ease;
+            opacity: 0.5;
         }
+
 
         &-overlay {
             position: absolute;

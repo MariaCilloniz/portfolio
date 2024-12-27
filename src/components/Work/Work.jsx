@@ -8,20 +8,20 @@ function Work() {
 
     const filters = [
         { id: 'all', label: 'All' },
+        { id: 'apps', label: 'Apps' },
         { id: 'web', label: 'Web Design' },
         { id: 'graphic', label: 'Graphic Design' },
         { id: 'software', label: 'Software' },
-        { id: 'apps', label: 'Apps' }
     ];
 
     const projects = [
         {
             id: 1,
-            title: 'Work 01',
-            category: 'web',
+            title: 'ReddiAudiTool',
+            category: 'apps',
             image: '/images/img-1.jpg',
-            type: 'Website',
-            stats: { views: 100, likes: 49 },
+            type: 'App',
+            stats: { views: 100, likes: 4 },
         },
         {
             id: 2,
@@ -47,7 +47,6 @@ function Work() {
             type: 'Application',
             stats: { views: 100, likes: 49 },
         },
-        // Add more projects as needed
     ];
 
     const filteredProjects = activeFilter === 'all'

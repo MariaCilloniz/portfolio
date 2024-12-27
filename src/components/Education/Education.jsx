@@ -18,7 +18,7 @@ function Education() {
         },
         {
             id: 'panel2',
-            title: 'Bachelor Degree of Arts, Major in Philsophy',
+            title: 'Bachelor Degree of Arts, Major in Philosophy',
             content: {
                 col1: 'University of British Columbia, Sep 2021 - May 2024',
                 col2: 'Logic, Analytical Philosphy, Ethics, Continental Philosophy, Philosphy of Science, Mind and Language.'

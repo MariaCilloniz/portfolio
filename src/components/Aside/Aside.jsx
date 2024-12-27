@@ -15,16 +15,13 @@ function Aside({ isOpen, toggleSidebar }) {
         { id: 'about', label: 'About' },
         { id: 'services', label: 'Services' },
         { id: 'skills', label: 'Skills' },
+        { id: 'work', label: 'Work' },
         { id: 'education', label: 'Education' },
         { id: 'experience', label: 'Experience' },
-        { id: 'work', label: 'Work' },
         { id: 'contact', label: 'Contact' }
     ];
 
 const socialLinks = [
-        { icon: <Facebook size={20} />, url: '#', label: 'Facebook' },
-        { icon: <Twitter size={20} />, url: '#', label: 'Twitter' },
-        { icon: <Instagram size={20} />, url: '#', label: 'Instagram' },
         { icon: <Linkedin size={20} />, url: '#', label: 'LinkedIn' }
     ];
     
