@@ -1,10 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import heroImage from '/images/output.png';
-import { 
-  Facebook, 
-  Twitter, 
-  Instagram, 
-  Linkedin 
+import {
+  Linkedin,
+  Github
 } from 'lucide-react';
 import './Aside.scss';
 
@@ -16,13 +14,14 @@ function Aside({ isOpen, toggleSidebar }) {
         { id: 'services', label: 'Services' },
         { id: 'skills', label: 'Skills' },
         { id: 'work', label: 'Work' },
-        { id: 'education', label: 'Education' },
-        { id: 'experience', label: 'Experience' },
+        // { id: 'education', label: 'Education' },
+        // { id: 'experience', label: 'Experience' },
         { id: 'contact', label: 'Contact' }
     ];
 
 const socialLinks = [
-        { icon: <Linkedin size={20} />, url: '#', label: 'LinkedIn' }
+        { icon: <Linkedin size={20} />, url: '#', label: 'LinkedIn' },
+        { icon: <Github size={20} />, url: '#', label: 'GitHub' }
     ];
     
     useEffect(() => {

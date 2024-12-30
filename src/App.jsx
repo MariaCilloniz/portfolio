@@ -41,8 +41,8 @@ function App() {
         <Services id="services" />
         <Skills id="skills" />
         <Work id="work" />
-        <Education id="education" />
-        <Experience id="experience" />
+        {/* <Education id="education" />
+        <Experience id="experience" /> */}
         <Contact id="contact" />
       </main>
     </div>

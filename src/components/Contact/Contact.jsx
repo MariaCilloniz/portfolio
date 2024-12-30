@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, MapPin, Phone } from 'lucide-react';
+import { Mail, MapPin, Phone, Github, Linkedin} from 'lucide-react';
 import './Contact.scss';
 
 function Contact() {
@@ -28,17 +28,17 @@ function Contact() {
     const contactInfo = [
         {
             icon: <Mail />,
-            value: 'info@domain.com',
-            link: 'mailto:info@domain.com'
+            value: 'majocilloniz@gmail.com',
+            link: 'mailto:majocilloniz@gmail.com'
         },
         {
-            icon: <MapPin />,
-            value: '198 West 21th Street, Suite 721 New York NY 10016'
+            icon: <Github />,
+            value: 'MariaCilloniz'
         },
         {
-            icon: <Phone />,
-            value: '+123 456 7890',
-            link: 'tel:+1234567890'
+            icon: <Linkedin />,
+            value: 'Maria Jose Cilloniz',
+            link: 'Maria Jose Cilloniz'
         }
     ];
 
