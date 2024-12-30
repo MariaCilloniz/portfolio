@@ -11,6 +11,9 @@ import Education from '../src/components/Education/Education';
 import Experience from '../src/components/Experience/Experience';
 import Work from '../src/components/Work/Work';
 import Contact from '../src/components/Contact/Contact';
+import emailjs from '@emailjs/browser'
+
+emailjs.init("C6WVnCIEbfAHvufTP");
 
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);

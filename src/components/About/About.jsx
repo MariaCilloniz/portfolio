@@ -7,13 +7,13 @@ function About() {
     const services = [
         {
             icon: <Lightbulb size={36} />,
-            title: "Graphic Design",
+            title: "Web Development",
             color: "#4A90E2", // Bright blue to match hero
             bgColor: "rgba(74, 144, 226, 0.1)"
         },
         {
             icon: <Globe size={36} />,
-            title: "Web Design",
+            title: "Graphic Design",
             color: "#E667B0", // Pink/magenta
             bgColor: "rgba(230, 103, 176, 0.1)"
         },

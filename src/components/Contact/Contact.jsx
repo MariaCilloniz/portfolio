@@ -1,15 +1,44 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, MapPin, Phone, Github, Linkedin} from 'lucide-react';
+import { Mail, Github, Linkedin} from 'lucide-react';
+import emailjs from '@emailjs/browser';
 import './Contact.scss';
 
 function Contact() {
+    const [loading, setLoading] = useState(false);
+    const [errors, setErrors] = useState({});
     const [formState, setFormState] = useState({
-        name: '',
+        from_name: '',
         email: '',
         subject: '',
         message: ''
     });
+
+    const validateForm = () => {
+        const newErrors = {};
+        
+        if (!formState.from_name.trim()) {
+            newErrors.from_name = 'Please enter your name';
+        }
+
+        if (!formState.email.trim()) {
+            newErrors.email = 'Please enter your email';
+        } else if (!/\S+@\S+\.\S+/.test(formState.email)) {
+            newErrors.email = 'Please enter a valid email address';
+        }
+
+        if (!formState.subject.trim()) {
+            newErrors.subject = 'Please enter a subject';
+        }
+
+        if (!formState.message.trim()) {
+            newErrors.message = 'Please enter a message';
+        }
+
+        setErrors(newErrors);
+        return Object.keys(newErrors).length === 0;
+    };
+
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -17,12 +46,53 @@ function Contact() {
             ...prev,
             [name]: value
         }));
+
+        if (errors[name]) {
+            setErrors(prev => ({
+                ...prev,
+                [name]: ''
+            }));
+        }
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        // Replace this with actual functionality if needed.
-        alert('Message sent!');
+        
+        if (!validateForm()) {
+            return;
+        }
+
+        setLoading(true);
+
+        const templateParams = {
+            from_name: formState.from_name,
+            email: formState.email,
+            subject: formState.subject,
+            message: formState.message,
+            reply_to: formState.email 
+        };
+
+        try {
+            await emailjs.send(
+                'service_89pmlb8', 
+                'template_aekdyjq', 
+                templateParams,
+                'C6WVnCIEbfAHvufTP' 
+            );
+
+            setFormState({
+                from_name: '',
+                email: '',
+                subject: '',
+                message: ''
+            });
+            alert('Message sent successfully!');
+        } catch (error) {
+            console.error('Error sending email:', error);
+            alert('Failed to send message. Please try again.');
+        } finally {
+            setLoading(false);
+        }
     };
 
     const contactInfo = [
@@ -33,12 +103,13 @@ function Contact() {
         },
         {
             icon: <Github />,
-            value: 'MariaCilloniz'
+            value: 'MariaCilloniz',
+            link: 'https://github.com/MariaCilloniz'
         },
         {
             icon: <Linkedin />,
             value: 'Maria Jose Cilloniz',
-            link: 'Maria Jose Cilloniz'
+            link: 'https://www.linkedin.com/in/mariajosecilloniz'
         }
     ];
 
@@ -56,34 +127,37 @@ function Contact() {
                 </motion.div>
 
                 <div className="contact__grid">
-                    {/* Contact Information */}
                     <div className="contact__info">
                         {contactInfo.map((item, index) => (
                             <div key={index} className="contact__info-item">
                                 <div className="contact__info-icon">{item.icon}</div>
                                 <div className="contact__info-content">
-                                    {item.link ? (
-                                        <a href={item.link}>{item.value}</a>
-                                    ) : (
-                                        <p>{item.value}</p>
-                                    )}
+                                    <a 
+                                        href={item.link}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        {item.value}
+                                    </a>
                                 </div>
                             </div>
                         ))}
                     </div>
 
-                    {/* Contact Form */}
                     <div className="contact__form-container">
                         <form onSubmit={handleSubmit} className="contact__form">
                             <div className="form__group">
                                 <input
                                     type="text"
-                                    name="name"
-                                    value={formState.name}
+                                    name="from_name"
+                                    value={formState.from_name}
                                     onChange={handleChange}
                                     placeholder="Name"
-                                    required
+                                    className={errors.from_name ? 'error' : ''}
                                 />
+                                {errors.from_name && (
+                                    <span className="error-message">{errors.from_name}</span>
+                                )}
                             </div>
                             <div className="form__group">
                                 <input
@@ -92,8 +166,11 @@ function Contact() {
                                     value={formState.email}
                                     onChange={handleChange}
                                     placeholder="Email"
-                                    required
+                                    className={errors.email ? 'error' : ''}
                                 />
+                                {errors.email && (
+                                    <span className="error-message">{errors.email}</span>
+                                )}
                             </div>
                             <div className="form__group">
                                 <input
@@ -102,7 +179,11 @@ function Contact() {
                                     value={formState.subject}
                                     onChange={handleChange}
                                     placeholder="Subject"
+                                    className={errors.subject ? 'error' : ''}
                                 />
+                                {errors.subject && (
+                                    <span className="error-message">{errors.subject}</span>
+                                )}
                             </div>
                             <div className="form__group">
                                 <textarea
@@ -111,11 +192,18 @@ function Contact() {
                                     onChange={handleChange}
                                     placeholder="Message"
                                     rows="7"
-                                    required
+                                    className={errors.message ? 'error' : ''}
                                 />
+                                {errors.message && (
+                                    <span className="error-message">{errors.message}</span>
+                                )}
                             </div>
-                            <button type="submit" className="button button--primary">
-                                Send Message
+                            <button 
+                                type="submit" 
+                                className="button button--primary"
+                                disabled={loading}
+                            >
+                                {loading ? 'Sending...' : 'Send Message'}
                             </button>
                         </form>
                     </div>
