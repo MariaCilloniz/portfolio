@@ -34,7 +34,7 @@
         justify-content: space-between;
 
         .skill {
-            flex: 1 1 45%; // Adjust as needed for responsiveness
+            flex: 1 1 45%; 
             display: flex;
             flex-direction: column;
             color: white;
@@ -63,7 +63,6 @@
                 transition: width 1s ease-in-out;
                 position: relative;
 
-                // Custom colors for each skill
                 &--react { background: #e683ff; }
                 &--js { background: #96ffff; }
                 &--html { background: #75ff0d; }

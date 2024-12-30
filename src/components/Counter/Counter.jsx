@@ -19,7 +19,7 @@ function Counter() {
 
         React.useEffect(() => {
             if (isInView) {
-                const duration = 2000; // 2 seconds
+                const duration = 2000; 
                 const steps = 50;
                 const increment = value / steps;
                 let current = 0;

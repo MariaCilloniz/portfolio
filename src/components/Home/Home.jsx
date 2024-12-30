@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion';
 import './Home.scss';;
-import heroImage from '/images/output.png'; // Import the image
+import heroImage from '/images/output.png'; 
 
 function Hero() {
     const handleNavClick = (sectionId) => {

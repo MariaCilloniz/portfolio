@@ -35,16 +35,11 @@
         font-weight: bold;
         text-transform: uppercase;
         text-shadow:
-            // Magenta shadows (more visible)
             3px 3px 0 rgba(255, 0, 255, 0.4),
             2px 2px 0 rgba(255, 0, 255, 0.3),
-            // Cyan shadows (more visible)
             -3px -3px 0 rgba(0, 255, 255, 0.4),
             -2px -2px 0 rgba(0, 255, 255, 0.3),
-            // Additional glow effect
             0 0 10px rgba(255, 255, 255, 0.2);
-
-        // Optional: Add a subtle animation for more effect
         animation: glowPulse 2s infinite alternate;
     }
 }

@@ -14,8 +14,6 @@ function Aside({ isOpen, toggleSidebar }) {
         { id: 'services', label: 'Services' },
         { id: 'skills', label: 'Skills' },
         { id: 'work', label: 'Work' },
-        // { id: 'education', label: 'Education' },
-        // { id: 'experience', label: 'Experience' },
         { id: 'contact', label: 'Contact' }
     ];
 
@@ -36,7 +34,7 @@ function Aside({ isOpen, toggleSidebar }) {
     useEffect(() => {
         const handleScroll = () => {
             const sections = menuItems.map(item => document.getElementById(item.id));
-            const scrollPosition = window.scrollY + 200; // Offset for better detection
+            const scrollPosition = window.scrollY + 200; 
 
             sections.forEach(section => {
                 if (section) {
@@ -51,7 +49,7 @@ function Aside({ isOpen, toggleSidebar }) {
         };
 
         window.addEventListener('scroll', handleScroll);
-        handleScroll(); // Initial check
+        handleScroll(); 
 
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
@@ -73,7 +71,6 @@ function Aside({ isOpen, toggleSidebar }) {
     return (
         <aside className={`aside ${isOpen ? 'aside--open' : ''}`}>
             <div className="aside__content">
-                {/* Profile Section */}
                 <div className="aside__profile">
                     <div
                         className="aside__profile-img"

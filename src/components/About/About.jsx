@@ -8,19 +8,19 @@ function About() {
         {
             icon: <Lightbulb size={36} />,
             title: "Web Development",
-            color: "#4A90E2", // Bright blue to match hero
+            color: "#4A90E2", 
             bgColor: "rgba(74, 144, 226, 0.1)"
         },
         {
             icon: <Globe size={36} />,
             title: "Graphic Design",
-            color: "#E667B0", // Pink/magenta
+            color: "#E667B0", 
             bgColor: "rgba(230, 103, 176, 0.1)"
         },
         {
             icon: <Database size={36} />,
             title: "Software",
-            color: "#50E3C2", // Bright cyan/green
+            color: "#50E3C2", 
             bgColor: "rgba(80, 227, 194, 0.1)"
         },
     ];
