@@ -1,5 +1,5 @@
 .experience {
-    padding: 3rem 7rem;
+    padding: 4rem 7rem;
     width: 78vw;
 }
 
@@ -7,21 +7,6 @@
     margin-bottom: 3rem;
     text-align: left;
 
-    &__meta {
-        text-transform: uppercase;
-        font-size: 12px;
-        letter-spacing: 4px;
-        font-weight: 500;
-        color: #999999;
-        display: block;
-        margin-bottom: 0.5rem;
-    }
-
-    &__title {
-        font-size: 32px;
-        font-weight: 700;
-        position: relative;
-    }
 }
 
 .timeline {

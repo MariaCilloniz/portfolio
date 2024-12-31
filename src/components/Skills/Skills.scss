@@ -1,23 +1,16 @@
 .skills {
-    padding: 3rem 7rem;
+    padding: 21rem 7rem;
     width: 78vw;
     
 
     .section-header {
-        text-align: left;
-        margin-bottom: 2rem;
+        margin-bottom: 4rem;
 
-        &__meta {
-            font-size: 12px;
-            color: #999;
-            text-transform: uppercase;
-        }
-
-        &__title {
-            font-size: 2rem;
-            font-weight: bold;
-            margin-top: 0.5rem;
-        }
+        // &__meta {
+        //     font-size: 12px;
+        //     color: #999;
+        //     text-transform: uppercase;
+        // }
     }
 
     .skills__description {

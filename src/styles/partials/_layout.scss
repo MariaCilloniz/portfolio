@@ -1,0 +1,23 @@
+.layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+.app {
+    overflow-x: hidden;
+    background: linear-gradient(45deg, $background-dark, $background-light);
+}
+
+.main-content {
+    width: 100%;
+    min-height: 100vh;
+    transition: margin-left 0.3s ease;
+    margin-left: $sidebar-width;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
