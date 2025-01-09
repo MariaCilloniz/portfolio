@@ -6,12 +6,12 @@ $light-color: #fff;
 $background-dark: #111;
 $background-light: #1a1a1a;
 
-$sidebar-width: 400px;
-$sidebar-width-mobile: 250px;
+$sidebar-width: 25rem;
+$sidebar-width-mobile: 15.625rem;
 
-$breakpoint-mobile: 480px;
-$breakpoint-tablet: 768px;
-$breakpoint-desktop: 1280px;
+$breakpoint-mobile: 30rem;
+$breakpoint-tablet: 48rem;
+$breakpoint-desktop: 80rem;
 
 @mixin mobile {
     @media (max-width: #{$breakpoint-mobile}) {

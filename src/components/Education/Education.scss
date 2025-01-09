@@ -30,8 +30,8 @@
 
     &__panel {
         margin-bottom: 0.5rem;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 8px;
+        border: 0.0625rem solid rgba(255, 255, 255, 0.1);
+        border-radius: 0.5rem;
         background: #161616;
         position: relative;
         overflow: hidden;
@@ -51,7 +51,7 @@
         }
 
         &:hover {
-            transform: translateY(-5px);
+            transform: translateY(-0.3125rem);
             
             &::before {
                 opacity: 1;
@@ -92,8 +92,8 @@
             align-items: center;
 
             svg {
-                width: 20px;
-                height: 20px;
+                width: 1.25rem;
+                height: 1.25rem;
             }
         }
 
@@ -136,8 +136,8 @@
                     position: absolute;
                     left: -1rem;
                     top: 0.5rem;
-                    width: 5px;
-                    height: 5px;
+                    width: 0.3125rem;
+                    height: 0.3125rem;
                     border-radius: 50%;
                     background-color: currentColor;
                 }

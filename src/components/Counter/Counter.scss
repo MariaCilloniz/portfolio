@@ -16,14 +16,14 @@
     &__content {
         position: relative;
         z-index: 2;
-        max-width: 1200px;
+        max-width: 75rem;
         margin: 0 auto;
         padding: 0 1rem;
     }
 
     &__grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
         gap: 2rem;
     }
 
@@ -51,7 +51,7 @@
     &__label {
         font-size: 1.1rem;
         text-transform: uppercase;
-        letter-spacing: 1px;
+        letter-spacing: 0.0625rem;
         opacity: 0.8;
     }
 }

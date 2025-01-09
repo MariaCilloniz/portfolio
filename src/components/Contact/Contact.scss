@@ -37,7 +37,7 @@
                 .contact__info-icon {
                     background-color: #f1f1f1;
                     padding: 1rem;
-                    border-radius: 8px;
+                    border-radius: 0.5rem;
                     display: flex;
                     justify-content: center;
                     align-items: center;
@@ -70,8 +70,8 @@
                         font-family: 'Poppins', sans-serif;
                         width: 100%;
                         padding: 0.8rem;
-                        border: 1px solid #ddd;
-                        border-radius: 8px;
+                        border: 0.0625rem solid #ddd;
+                        border-radius: 0.5rem;
                         font-size: 1rem;
                         outline: none;
                         transition: border-color 0.3s;
@@ -80,7 +80,7 @@
                             border-color: #007bff;
                         }
                         &.error {
-                            border: 3px solid #dc3545;
+                            border: 0.1875rem solid #dc3545;
                             
                             &:focus {
                                 border-color: #dc3545;
@@ -91,7 +91,7 @@
                             color: #dc3545;
                             font-size: 0.875rem;
                             position: absolute;
-                            bottom: -20px;
+                            bottom: -1.25rem;
                             left: 0;
                             margin-top: 0.25rem;
                         }
@@ -103,7 +103,7 @@
                     color: #fff;
                     border: none;
                     padding: 0.8rem 1.5rem;
-                    border-radius: 8px;
+                    border-radius: 0.5rem;
                     font-size: 1rem;
                     cursor: pointer;
                     transition: background-color 0.3s;

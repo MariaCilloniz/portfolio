@@ -38,7 +38,7 @@
 .service-card {
     position: relative;
     background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(0.625rem);
     border-radius: 1rem;
     padding: 2rem;
     overflow: hidden;
@@ -59,7 +59,7 @@
     }
 
     &:hover {
-        transform: translateY(-5px);
+        transform: translateY(-0.3125rem);
 
         &::before {
             opacity: 1;
@@ -113,8 +113,8 @@
         color: white;
         margin-bottom: 1rem;
         text-shadow:
-            1px 1px 0 rgba(255, 0, 255, 0.2),
-            -1px -1px 0 rgba(0, 255, 255, 0.2);
+            0.0625rem 0.0625rem 0 rgba(255, 0, 255, 0.2),
+            -0.0625rem -0.0625rem 0 rgba(0, 255, 255, 0.2);
     }
 
     &__description {

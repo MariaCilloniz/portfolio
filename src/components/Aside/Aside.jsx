@@ -95,6 +95,14 @@ function Aside({ isOpen, toggleSidebar }) {
                     <div
                         className="aside__profile-img"
                         style={{ backgroundImage: `url(${heroImage})` }}
+                        onClick={() => handleNavClick('home')}
+                        role="button"
+                        tabIndex={0}
+                        onKeyDown={(e) => {
+                            if (e.key === 'Enter') {
+                                handleNavClick('home');
+                            }
+                        }}
                     />
                     <h1 className="aside__profile-name">
                         <a href="#home" onClick={(e) => {

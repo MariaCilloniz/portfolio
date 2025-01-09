@@ -4,7 +4,7 @@
     font-family: 'Poppins', sans-serif;
     position: fixed;
     top: 0;
-    left: 38px;
+    left: 2.375rem;
     background: #f2f3f7;
     padding: 0rem 2rem 2rem 2rem;
     transform: translateX(-100%);
@@ -14,7 +14,7 @@
     height: 100%;
 
     @include desktop {
-        transform: none;  // Only show on desktop
+        transform: none; 
     }
 
     &--open {
@@ -32,19 +32,20 @@
         margin-bottom: 2rem;
 
         @include tablet {
-            margin-bottom: 1.5rem;  // Slightly smaller margin on tablet
+            margin-bottom: 1.5rem; 
         }
 
         &-img {
             background-position: center;
             background-size: 115%;
-            width: 150px;
-            height: 150px;
+            width: 9.375rem;
+            height: 9.375rem;
             border-radius: 50%;
             margin: 1rem auto 1rem;
+            cursor: pointer;
             @include tablet {
-                width: 120px;  // Slightly smaller image on tablet
-                height: 120px;
+                width: 7.5rem; 
+                height: 7.5rem;
             }
             
         }
@@ -55,9 +56,9 @@
             a {
                 color: white;
                 text-decoration: none;
-                font-size: 24px;
+                font-size: 1.5rem;
                 font-weight: 500;
-                text-shadow: 3px 3px 0 rgba(255, 0, 255, 0.4), 2px 2px 0 rgba(255, 0, 255, 0.3), -3px -3px 0 rgb(19 206 206 / 24%), -2px -2px 0 rgb(0 255 255 / 0%), 0 0 10px rgba(255, 255, 255, 0.2);
+                text-shadow: 0.1875rem 0.1875rem 0 rgba(255, 0, 255, 0.4), 0.125rem 0.125rem 0 rgba(255, 0, 255, 0.3), -0.1875rem -0.1875rem 0 rgb(19 206 206 / 24%), -0.125rem -0.125rem 0 rgb(0 255 255 / 0%), 0 0 0.625rem rgba(255, 255, 255, 0.2);
 
                 &:hover {
                     color: #2c98f0;
@@ -66,7 +67,7 @@
         }
 
         &-position {
-            font-size: 14px;
+            font-size: 0.875rem;
             color: #999;
 
             a {
@@ -106,13 +107,13 @@
             text-align: left;
             cursor: pointer;
             transition: all 0.3s ease;
-            font-size: 16px;
+            font-size: 1rem;
             position: relative;
-            border-radius: 4px;
+            border-radius: 0.25rem;
             text-align: center;
             @include tablet {
-                padding: 0.5rem 1rem;  // Slightly less padding on tablet
-                font-size: 15px;  // Slightly smaller font on tablet
+                padding: 0.5rem 1rem;  
+                font-size: 0.9375rem; 
             }
 
             &:hover {
@@ -130,13 +131,13 @@
 
     &__footer {
         margin-top: auto;
-        padding-top: 10px;
-        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        padding-top: 0.625rem;
+        border-top: 0.0625rem solid rgba(0, 0, 0, 0.1);
 
         &-copyright {
             text-align: center;
             margin-bottom: 1rem;
-            font-size: 14px;
+            font-size: 0.875rem;
             color: #999;
 
             .heart {
@@ -172,8 +173,8 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 32px;
-            height: 32px;
+            width: 2rem;
+            height: 2rem;
             border-radius: 50%;
             background: rgba(0, 0, 0, 0.05);
 
