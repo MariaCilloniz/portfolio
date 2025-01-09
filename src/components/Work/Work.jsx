@@ -5,7 +5,7 @@ import './Work.scss';
 
 function Work() {
     const [activeFilter, setActiveFilter] = useState('all');
-    const [visibleCount, setVisibleCount] = useState(4);
+    const [visibleCount, setVisibleCount] = useState(3);
 
     const filters = [
         { id: 'all', label: 'All' },
@@ -134,11 +134,11 @@ function Work() {
     const hasMore = visibleCount < filteredProjects.length;
 
     const handleLoadMore = () => {
-        setVisibleCount(prevCount => prevCount + 4);
+        setVisibleCount(prevCount => prevCount + 3);
     };
     const handleFilterChange = (filterId) => {
         setActiveFilter(filterId);
-        setVisibleCount(4);
+        setVisibleCount(3);
     };
 
     return (

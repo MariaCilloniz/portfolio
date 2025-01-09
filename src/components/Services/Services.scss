@@ -1,9 +1,9 @@
 @use '../../styles/partials/variables' as *;
 
 .services {
-    padding: 10rem 7rem;
-    width: 78vw;
-    
+    padding: 2rem 0rem;
+    width: 69vw;
+
     @include tablet {
         padding: 4rem 7rem;
         width: 90vw;
