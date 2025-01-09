@@ -1,6 +1,17 @@
+@use '../../styles/partials/variables' as *;
+
 .contact {
     padding: 14rem 7rem;
     width: 78vw;
+    @include tablet {
+        padding: 4rem 2.5rem;
+        width: 90vw;
+    }
+
+    @include mobile {
+        padding: 4rem 3rem;
+        width: 100%;
+    }
 
     .section-header {
         text-align: center;

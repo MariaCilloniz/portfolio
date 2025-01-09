@@ -1,4 +1,4 @@
-@import './styles/partials/_variables';
-@import './styles/partials/_base';
-@import './styles/partials/_layout';
-@import './styles/partials/_components';
+@use './styles/partials/variables' as *;
+@use './styles/partials/base';
+@use './styles/partials/layout';
+@use './styles/partials/components';

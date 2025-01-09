@@ -1,6 +1,17 @@
+@use '../../styles/partials/variables' as *;
+
 .education {
     padding: 15rem 7rem;
     width: 78vw;
+    @include tablet {
+        padding: 4rem 7rem;
+        width: 90vw;
+    }
+
+    @include mobile {
+        padding: 4rem 3rem;
+        width: 100%;
+    }
 
 
     .section-header {

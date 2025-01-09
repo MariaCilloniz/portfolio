@@ -1,6 +1,17 @@
+@use '../../styles/partials/variables' as *;
+
 .experience {
     padding: 14rem 7rem;
     width: 78vw;
+    @include tablet {
+        padding: 4rem 7rem;
+        width: 90vw;
+    }
+
+    @include mobile {
+        padding: 4rem 3rem;
+        width: 100%;
+    }
 }
 
 .section-header {
@@ -11,7 +22,6 @@
 
 .timeline {
     position: relative;
-    padding: 4em 0;
 
     &:before {
         content: '';
@@ -163,10 +173,18 @@
             width: 30px;
             height: 30px;
             margin-left: -15px;
+            top: -38px;
             background: rgba(255, 255, 255, 0.05);
             box-shadow: 
                 0 0 0 3px rgba(255, 255, 255, 0.1),
                 0 0 15px rgba(0, 255, 255, 0.5);
+
+                @include mobile{
+                    display: none;
+                }
+                @include tablet{
+                    display: none;
+                }
         }
     }
 }

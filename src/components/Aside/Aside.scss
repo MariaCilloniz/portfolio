@@ -1,3 +1,5 @@
+@use '../../styles/partials/variables' as *;
+
 .aside {
     font-family: 'Poppins', sans-serif;
     position: fixed;
@@ -11,8 +13,8 @@
     background: #222222;
     height: 100%;
 
-    @media (min-width: 768px) {
-        transform: none;
+    @include desktop {
+        transform: none;  // Only show on desktop
     }
 
     &--open {
@@ -29,6 +31,10 @@
         text-align: center;
         margin-bottom: 2rem;
 
+        @include tablet {
+            margin-bottom: 1.5rem;  // Slightly smaller margin on tablet
+        }
+
         &-img {
             background-position: center;
             background-size: 115%;
@@ -36,6 +42,10 @@
             height: 150px;
             border-radius: 50%;
             margin: 1rem auto 1rem;
+            @include tablet {
+                width: 120px;  // Slightly smaller image on tablet
+                height: 120px;
+            }
             
         }
 
@@ -100,6 +110,10 @@
             position: relative;
             border-radius: 4px;
             text-align: center;
+            @include tablet {
+                padding: 0.5rem 1rem;  // Slightly less padding on tablet
+                font-size: 15px;  // Slightly smaller font on tablet
+            }
 
             &:hover {
                 color: #2c98f0;

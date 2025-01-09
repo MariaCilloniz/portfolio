@@ -1,11 +1,18 @@
+@use '../../styles/partials/variables' as *;
+
 .layout {
     display: flex;
     min-height: 100vh;
+
+    @include tablet {
+        flex-direction: column;  // Stack vertically on tablet/mobile
+    }
 }
 
 .app {
     overflow-x: hidden;
     background: linear-gradient(45deg, $background-dark, $background-light);
+    width: 100%;
 }
 
 .main-content {
@@ -13,6 +20,11 @@
     min-height: 100vh;
     transition: margin-left 0.3s ease;
     margin-left: $sidebar-width;
+
+    @include tablet {
+        margin-left: 0;  // Remove sidebar margin on tablet/mobile
+        padding-top: 60px;  // Add space for mobile header/nav if needed
+    }
 }
 
 .container {
@@ -20,4 +32,13 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
+
+    @include tablet {
+        padding: 0 1.5rem;
+        max-width: 100%;
+    }
+
+    @include mobile {
+        padding: 0 1rem;
+    }
 }
