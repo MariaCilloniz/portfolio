@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import heroImage from '/images/output.png';
 import {
     Linkedin,
-    Github
+    Github,
+    FileUser,
 } from 'lucide-react';
 import './Aside.scss';
 
@@ -13,23 +14,42 @@ function Aside({ isOpen, toggleSidebar }) {
         { id: 'about', label: 'About' },
         { id: 'services', label: 'Services' },
         { id: 'skills', label: 'Skills' },
-        { id: 'work', label: 'Work' },
+        { id: 'work', label: 'Projects' },
+        { id: 'experience', label: 'Experience' },
+        { id: 'education', label: 'Education' },
         { id: 'contact', label: 'Contact' }
     ];
+
+    const handleCVDownload = (e) => {
+        e.preventDefault();
+        const link = document.createElement('a');
+        link.href = '/assets/cv/Maria_Cilloniz_CV.pdf';
+        link.download = 'Maria_Cilloniz_CV.pdf';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    };
 
     const socialLinks = [
         {
             icon: <Github size={20} />,
             url: 'https://github.com/MariaCilloniz',
-            label: 'GitHub'
+            label: 'GitHub',
+            isExternal: true
         },
         {
             icon: <Linkedin size={20} />,
             url: 'https://www.linkedin.com/in/mariajosecilloniz',
-            label: 'LinkedIn'
+            label: 'LinkedIn',
+            isExternal: true
+        },
+        {
+            icon: <FileUser size={20} />,
+            url: '/assets/cv/Maria_Jose_Cilloniz_CV.pdf',
+            label: 'CV',
+            isDownload: true
         }
     ];
-
 
     useEffect(() => {
         const handleScroll = () => {
@@ -121,6 +141,7 @@ function Aside({ isOpen, toggleSidebar }) {
                                     aria-label={social.label}
                                     target="_blank"
                                     rel="noopener noreferrer"
+                                    onClick={social.isDownload ? handleCVDownload : undefined}
                                 >
                                     {social.icon}
                                 </a>

@@ -28,9 +28,9 @@ function Work() {
         {
             id: 2,
             title: 'Meta Safe',
-            category: 'web',
+            category: 'apps',
             image: '/images/img-2.jpg',
-            type: 'Web Design/App',
+            type: 'App',
             stats: { views: 15, likes: 3 },
             url: 'https://github.com/MariaCilloniz/Meta-Safe'
         },
@@ -50,14 +50,14 @@ function Work() {
             image: '/images/brainflix.jpg',
             type: 'Web Design/App',
             stats: { views: 15, likes: 3 },
-            url: 'https://github.com/MariaCilloniz/maria-cilloniz-brainflix'
+            url: 'https://brainflix-application.netlify.app/'
         },
         {
             id: 5,
             title: 'Daily Dashboard',
             category: 'web',
             image: '/images/img-3.jpg',
-            type: 'Application / Web Design',
+            type: 'Web Design/App',
             stats: { views: 10, likes: 1 },
             url: 'https://github.com/MariaCilloniz/daily-dash'
         },
@@ -66,7 +66,7 @@ function Work() {
             title: 'Cocktail Party',
             category: 'apps',
             image: '/images/img-4.jpg',
-            type: 'Application / Web Design',
+            type: 'Web Design/App',
             stats: { views: 17, likes: 1 },
             url: 'https://github.com/MariaCilloniz/CocktailParty-first-hackathon'
         },
